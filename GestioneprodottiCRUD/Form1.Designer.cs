@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Nome_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Prezzo_box = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.modprezzo_box = new System.Windows.Forms.TextBox();
+            this.modnome_box = new System.Windows.Forms.TextBox();
+            this.ricerca_box = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.perc_box = new System.Windows.Forms.TextBox();
             this.articoli = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.somma_btn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.max_btn = new System.Windows.Forms.Button();
+            this.min_btn = new System.Windows.Forms.Button();
+            this.percentuale_btn = new System.Windows.Forms.Button();
+            this.Modificap_btn = new System.Windows.Forms.Button();
+            this.Modifican_btn = new System.Windows.Forms.Button();
+            this.cancella_btn = new System.Windows.Forms.Button();
+            this.inserisci_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -62,12 +62,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "NOME";
             // 
-            // textBox1
+            // Nome_box
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 20);
-            this.textBox1.TabIndex = 1;
+            this.Nome_box.Location = new System.Drawing.Point(48, 44);
+            this.Nome_box.Name = "Nome_box";
+            this.Nome_box.Size = new System.Drawing.Size(97, 20);
+            this.Nome_box.TabIndex = 1;
             // 
             // label2
             // 
@@ -78,12 +78,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "PREZZO";
             // 
-            // textBox2
+            // Prezzo_box
             // 
-            this.textBox2.Location = new System.Drawing.Point(189, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(97, 20);
-            this.textBox2.TabIndex = 3;
+            this.Prezzo_box.Location = new System.Drawing.Point(189, 44);
+            this.Prezzo_box.Name = "Prezzo_box";
+            this.Prezzo_box.Size = new System.Drawing.Size(97, 20);
+            this.Prezzo_box.TabIndex = 3;
             // 
             // textBox3
             // 
@@ -92,26 +92,26 @@
             this.textBox3.Size = new System.Drawing.Size(97, 20);
             this.textBox3.TabIndex = 4;
             // 
-            // textBox4
+            // modprezzo_box
             // 
-            this.textBox4.Location = new System.Drawing.Point(48, 254);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(97, 20);
-            this.textBox4.TabIndex = 5;
+            this.modprezzo_box.Location = new System.Drawing.Point(48, 254);
+            this.modprezzo_box.Name = "modprezzo_box";
+            this.modprezzo_box.Size = new System.Drawing.Size(97, 20);
+            this.modprezzo_box.TabIndex = 5;
             // 
-            // textBox5
+            // modnome_box
             // 
-            this.textBox5.Location = new System.Drawing.Point(48, 201);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(97, 20);
-            this.textBox5.TabIndex = 6;
+            this.modnome_box.Location = new System.Drawing.Point(48, 201);
+            this.modnome_box.Name = "modnome_box";
+            this.modnome_box.Size = new System.Drawing.Size(97, 20);
+            this.modnome_box.TabIndex = 6;
             // 
-            // textBox6
+            // ricerca_box
             // 
-            this.textBox6.Location = new System.Drawing.Point(48, 146);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(97, 20);
-            this.textBox6.TabIndex = 7;
+            this.ricerca_box.Location = new System.Drawing.Point(48, 146);
+            this.ricerca_box.Name = "ricerca_box";
+            this.ricerca_box.Size = new System.Drawing.Size(97, 20);
+            this.ricerca_box.TabIndex = 7;
             // 
             // label3
             // 
@@ -150,39 +150,32 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "RICERCA NOME";
             // 
-            // textBox7
+            // perc_box
             // 
-            this.textBox7.Location = new System.Drawing.Point(48, 379);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(97, 20);
-            this.textBox7.TabIndex = 12;
+            this.perc_box.Location = new System.Drawing.Point(48, 379);
+            this.perc_box.Name = "perc_box";
+            this.perc_box.Size = new System.Drawing.Size(97, 20);
+            this.perc_box.TabIndex = 12;
             // 
             // articoli
             // 
+            this.articoli.BackColor = System.Drawing.SystemColors.Window;
+            this.articoli.ForeColor = System.Drawing.SystemColors.WindowText;
             this.articoli.FormattingEnabled = true;
-            this.articoli.Location = new System.Drawing.Point(489, 12);
+            this.articoli.Location = new System.Drawing.Point(492, 12);
             this.articoli.Name = "articoli";
-            this.articoli.Size = new System.Drawing.Size(243, 407);
+            this.articoli.Size = new System.Drawing.Size(323, 407);
             this.articoli.TabIndex = 13;
             // 
-            // button1
+            // somma_btn
             // 
-            this.button1.Location = new System.Drawing.Point(130, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 28);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "aggiungi";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(377, 185);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 36);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "somma prezzo prodotti";
-            this.button2.UseVisualStyleBackColor = true;
+            this.somma_btn.Location = new System.Drawing.Point(377, 185);
+            this.somma_btn.Name = "somma_btn";
+            this.somma_btn.Size = new System.Drawing.Size(89, 36);
+            this.somma_btn.TabIndex = 15;
+            this.somma_btn.Text = "somma prezzo prodotti";
+            this.somma_btn.UseVisualStyleBackColor = true;
+            this.somma_btn.Click += new System.EventHandler(this.somma_btn_Click);
             // 
             // button3
             // 
@@ -193,87 +186,103 @@
             this.button3.Text = "ordinamento dei prodotti";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // max_btn
             // 
-            this.button4.Location = new System.Drawing.Point(377, 46);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(78, 28);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "prezzo max";
-            this.button4.UseVisualStyleBackColor = true;
+            this.max_btn.Location = new System.Drawing.Point(377, 46);
+            this.max_btn.Name = "max_btn";
+            this.max_btn.Size = new System.Drawing.Size(78, 28);
+            this.max_btn.TabIndex = 17;
+            this.max_btn.Text = "prezzo max";
+            this.max_btn.UseVisualStyleBackColor = true;
+            this.max_btn.Click += new System.EventHandler(this.max_btn_Click);
             // 
-            // button5
+            // min_btn
             // 
-            this.button5.Location = new System.Drawing.Point(377, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 28);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "prezzo min";
-            this.button5.UseVisualStyleBackColor = true;
+            this.min_btn.Location = new System.Drawing.Point(377, 12);
+            this.min_btn.Name = "min_btn";
+            this.min_btn.Size = new System.Drawing.Size(78, 28);
+            this.min_btn.TabIndex = 18;
+            this.min_btn.Text = "prezzo min";
+            this.min_btn.UseVisualStyleBackColor = true;
+            this.min_btn.Click += new System.EventHandler(this.min_btn_Click);
             // 
-            // button6
+            // percentuale_btn
             // 
-            this.button6.Location = new System.Drawing.Point(174, 371);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(78, 28);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "percentuale";
-            this.button6.UseVisualStyleBackColor = true;
+            this.percentuale_btn.Location = new System.Drawing.Point(174, 371);
+            this.percentuale_btn.Name = "percentuale_btn";
+            this.percentuale_btn.Size = new System.Drawing.Size(78, 28);
+            this.percentuale_btn.TabIndex = 19;
+            this.percentuale_btn.Text = "percentuale";
+            this.percentuale_btn.UseVisualStyleBackColor = true;
+            this.percentuale_btn.Click += new System.EventHandler(this.percentuale_btn_Click);
             // 
-            // button7
+            // Modificap_btn
             // 
-            this.button7.Location = new System.Drawing.Point(169, 246);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(78, 28);
-            this.button7.TabIndex = 20;
-            this.button7.Text = "modifica";
-            this.button7.UseVisualStyleBackColor = true;
+            this.Modificap_btn.Location = new System.Drawing.Point(169, 246);
+            this.Modificap_btn.Name = "Modificap_btn";
+            this.Modificap_btn.Size = new System.Drawing.Size(78, 28);
+            this.Modificap_btn.TabIndex = 20;
+            this.Modificap_btn.Text = "modifica";
+            this.Modificap_btn.UseVisualStyleBackColor = true;
+            this.Modificap_btn.Click += new System.EventHandler(this.Modificap_btn_Click);
             // 
-            // button8
+            // Modifican_btn
             // 
-            this.button8.Location = new System.Drawing.Point(169, 193);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(78, 28);
-            this.button8.TabIndex = 21;
-            this.button8.Text = "modifica";
-            this.button8.UseVisualStyleBackColor = true;
+            this.Modifican_btn.Location = new System.Drawing.Point(169, 193);
+            this.Modifican_btn.Name = "Modifican_btn";
+            this.Modifican_btn.Size = new System.Drawing.Size(78, 28);
+            this.Modifican_btn.TabIndex = 21;
+            this.Modifican_btn.Text = "modifica";
+            this.Modifican_btn.UseVisualStyleBackColor = true;
+            this.Modifican_btn.Click += new System.EventHandler(this.Modifican_btn_Click);
             // 
-            // button9
+            // cancella_btn
             // 
-            this.button9.Location = new System.Drawing.Point(169, 138);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(78, 28);
-            this.button9.TabIndex = 22;
-            this.button9.Text = "cancella";
-            this.button9.UseVisualStyleBackColor = true;
+            this.cancella_btn.Location = new System.Drawing.Point(169, 138);
+            this.cancella_btn.Name = "cancella_btn";
+            this.cancella_btn.Size = new System.Drawing.Size(78, 28);
+            this.cancella_btn.TabIndex = 22;
+            this.cancella_btn.Text = "cancella";
+            this.cancella_btn.UseVisualStyleBackColor = true;
+            this.cancella_btn.Click += new System.EventHandler(this.cancella_btn_Click);
+            // 
+            // inserisci_btn
+            // 
+            this.inserisci_btn.Location = new System.Drawing.Point(138, 70);
+            this.inserisci_btn.Name = "inserisci_btn";
+            this.inserisci_btn.Size = new System.Drawing.Size(75, 23);
+            this.inserisci_btn.TabIndex = 23;
+            this.inserisci_btn.Text = "aggiungi";
+            this.inserisci_btn.UseVisualStyleBackColor = true;
+            this.inserisci_btn.Click += new System.EventHandler(this.inserisci_btn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.ClientSize = new System.Drawing.Size(827, 450);
+            this.Controls.Add(this.inserisci_btn);
+            this.Controls.Add(this.cancella_btn);
+            this.Controls.Add(this.Modifican_btn);
+            this.Controls.Add(this.Modificap_btn);
+            this.Controls.Add(this.percentuale_btn);
+            this.Controls.Add(this.min_btn);
+            this.Controls.Add(this.max_btn);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.somma_btn);
             this.Controls.Add(this.articoli);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.perc_box);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.ricerca_box);
+            this.Controls.Add(this.modnome_box);
+            this.Controls.Add(this.modprezzo_box);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Prezzo_box);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Nome_box);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -285,28 +294,28 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Nome_box;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Prezzo_box;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox modprezzo_box;
+        private System.Windows.Forms.TextBox modnome_box;
+        private System.Windows.Forms.TextBox ricerca_box;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox perc_box;
         private System.Windows.Forms.ListBox articoli;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button somma_btn;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button max_btn;
+        private System.Windows.Forms.Button min_btn;
+        private System.Windows.Forms.Button percentuale_btn;
+        private System.Windows.Forms.Button Modificap_btn;
+        private System.Windows.Forms.Button Modifican_btn;
+        private System.Windows.Forms.Button cancella_btn;
+        private System.Windows.Forms.Button inserisci_btn;
     }
 }
 
