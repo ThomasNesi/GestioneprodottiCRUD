@@ -154,5 +154,22 @@ namespace GestioneprodottiCRUD
             }
             MessageBox.Show("Prodotto minimo: " + maggiore);
         }
+
+        private void ordinamento_btn_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < articoli.Items.Count - 1; i++)
+            {
+                for (int j = 0; j < articoli.Items.Count - i - 1; j++)
+                {
+                    if (string.Compare(articoli.Items[j].ToString(), articoli.Items[j + 1].ToString()) > 0)
+                    {
+                        // Scambia gli elementi se sono fuori ordine
+                        object temp = articoli.Items[j];
+                        articoli.Items[j] = articoli.Items[j + 1];
+                        articoli.Items[j + 1] = temp;
+                    }
+                }
+            }
+        }
     }
 }

@@ -43,7 +43,7 @@
             this.perc_box = new System.Windows.Forms.TextBox();
             this.articoli = new System.Windows.Forms.ListBox();
             this.somma_btn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ordinamento_btn = new System.Windows.Forms.Button();
             this.max_btn = new System.Windows.Forms.Button();
             this.min_btn = new System.Windows.Forms.Button();
             this.percentuale_btn = new System.Windows.Forms.Button();
@@ -177,14 +177,15 @@
             this.somma_btn.UseVisualStyleBackColor = true;
             this.somma_btn.Click += new System.EventHandler(this.somma_btn_Click);
             // 
-            // button3
+            // ordinamento_btn
             // 
-            this.button3.Location = new System.Drawing.Point(377, 122);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 57);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "ordinamento dei prodotti";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ordinamento_btn.Location = new System.Drawing.Point(377, 122);
+            this.ordinamento_btn.Name = "ordinamento_btn";
+            this.ordinamento_btn.Size = new System.Drawing.Size(89, 57);
+            this.ordinamento_btn.TabIndex = 16;
+            this.ordinamento_btn.Text = "ordinamento dei prodotti";
+            this.ordinamento_btn.UseVisualStyleBackColor = true;
+            this.ordinamento_btn.Click += new System.EventHandler(this.ordinamento_btn_Click);
             // 
             // max_btn
             // 
@@ -268,7 +269,7 @@
             this.Controls.Add(this.percentuale_btn);
             this.Controls.Add(this.min_btn);
             this.Controls.Add(this.max_btn);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.ordinamento_btn);
             this.Controls.Add(this.somma_btn);
             this.Controls.Add(this.articoli);
             this.Controls.Add(this.perc_box);
@@ -308,7 +309,7 @@
         private System.Windows.Forms.TextBox perc_box;
         private System.Windows.Forms.ListBox articoli;
         private System.Windows.Forms.Button somma_btn;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ordinamento_btn;
         private System.Windows.Forms.Button max_btn;
         private System.Windows.Forms.Button min_btn;
         private System.Windows.Forms.Button percentuale_btn;
