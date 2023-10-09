@@ -32,7 +32,6 @@
             this.Nome_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Prezzo_box = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.modprezzo_box = new System.Windows.Forms.TextBox();
             this.modnome_box = new System.Windows.Forms.TextBox();
             this.ricerca_box = new System.Windows.Forms.TextBox();
@@ -85,13 +84,6 @@
             this.Prezzo_box.Size = new System.Drawing.Size(97, 20);
             this.Prezzo_box.TabIndex = 3;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(48, 353);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(97, 20);
-            this.textBox3.TabIndex = 4;
-            // 
             // modprezzo_box
             // 
             this.modprezzo_box.Location = new System.Drawing.Point(48, 254);
@@ -116,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 337);
+            this.label3.Location = new System.Drawing.Point(45, 300);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 39);
             this.label3.TabIndex = 8;
@@ -152,7 +144,7 @@
             // 
             // perc_box
             // 
-            this.perc_box.Location = new System.Drawing.Point(48, 379);
+            this.perc_box.Location = new System.Drawing.Point(48, 342);
             this.perc_box.Name = "perc_box";
             this.perc_box.Size = new System.Drawing.Size(97, 20);
             this.perc_box.TabIndex = 12;
@@ -164,7 +156,7 @@
             this.articoli.FormattingEnabled = true;
             this.articoli.Location = new System.Drawing.Point(492, 12);
             this.articoli.Name = "articoli";
-            this.articoli.Size = new System.Drawing.Size(323, 407);
+            this.articoli.Size = new System.Drawing.Size(323, 342);
             this.articoli.TabIndex = 13;
             // 
             // somma_btn
@@ -209,7 +201,7 @@
             // 
             // percentuale_btn
             // 
-            this.percentuale_btn.Location = new System.Drawing.Point(174, 371);
+            this.percentuale_btn.Location = new System.Drawing.Point(169, 342);
             this.percentuale_btn.Name = "percentuale_btn";
             this.percentuale_btn.Size = new System.Drawing.Size(78, 28);
             this.percentuale_btn.TabIndex = 19;
@@ -261,7 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 450);
+            this.ClientSize = new System.Drawing.Size(827, 371);
             this.Controls.Add(this.inserisci_btn);
             this.Controls.Add(this.cancella_btn);
             this.Controls.Add(this.Modifican_btn);
@@ -280,7 +272,6 @@
             this.Controls.Add(this.ricerca_box);
             this.Controls.Add(this.modnome_box);
             this.Controls.Add(this.modprezzo_box);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.Prezzo_box);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Nome_box);
@@ -298,7 +289,6 @@
         private System.Windows.Forms.TextBox Nome_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Prezzo_box;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox modprezzo_box;
         private System.Windows.Forms.TextBox modnome_box;
         private System.Windows.Forms.TextBox ricerca_box;
