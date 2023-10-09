@@ -31,11 +31,23 @@ namespace GestioneprodottiCRUD
         //inserire prodotto
         private void inserisci_btn_Click(object sender, EventArgs e)
         {
-            p[dim].nome = Nome_box.Text;
-            p[dim].prezzo = float.Parse(Prezzo_box.Text);
-            dim++;
-            visualizza(p);
-            MessageBox.Show("Aggiunto");
+            bool testoinserito = false;
+            if (string.IsNullOrEmpty(Nome_box.Text) || string.IsNullOrEmpty(Prezzo_box.Text))
+            {
+                testoinserito = false;
+                MessageBox.Show("Non hai inserito nulla!");
+            }
+            else
+            {
+                testoinserito = true;
+                p[dim].nome = Nome_box.Text;
+                p[dim].prezzo = float.Parse(Prezzo_box.Text);
+                dim++;
+                visualizza(p);
+                MessageBox.Show("Prodotto aggiunto");
+                Nome_box.Clear();
+                Prezzo_box.Clear();
+            }
         }
         public void aggiornaVista(int dim)
         {
@@ -62,39 +74,46 @@ namespace GestioneprodottiCRUD
 
         private void Modifican_btn_Click(object sender, EventArgs e)
         {
+            // scorre tutti i prodotti
             for (int i = 0; i < dim; i++)
             {
+                // controlla se è il prodotto ricercato
                 if (p[i].nome == ricerca_box.Text)
                 {
                     p[i].nome = modnome_box.Text;
+                    MessageBox.Show("Modificato");
+                    aggiornaVista(dim);
                     break;
                 }
-                MessageBox.Show("Modificato");
                 aggiornaVista(dim);
             }
         }
 
         private void Modificap_btn_Click(object sender, EventArgs e)
         {
+            // scorre tutti i prezzi
             for (int i = 0; i < dim; i++)
             {
+                // controlla se è il prezzo ricercato
                 if (p[i].prezzo == float.Parse(ricerca_box.Text))
                 {
                     p[i].prezzo = float.Parse(modprezzo_box.Text);
+                    MessageBox.Show("Modificato");
+                    aggiornaVista(dim);
                     break;
                 }
-                MessageBox.Show("Modificato");
-                aggiornaVista(dim);
             }
         }
 
         private void cancella_btn_Click(object sender, EventArgs e)
         {
+            // scorre ogni prodotto
             for (int i = 0; i < dim; i++)
             {
-
+                // verifica se è il prodotto ricercato
                 if (p[i].nome == ricerca_box.Text)
                 {
+                    // cambia e cancella la posizione del prodotto ricercato 
                     for (int j = i; j < dim - 1; j++)
                     {
                         p[j] = p[j + 1];
@@ -112,6 +131,7 @@ namespace GestioneprodottiCRUD
         private void somma_btn_Click(object sender, EventArgs e)
         {
             float prezzotot = 0;
+            // somma tutti i prezzi
             for (int i = 0; i < dim; i++)
             {
                 prezzotot += p[i].prezzo;
@@ -121,20 +141,22 @@ namespace GestioneprodottiCRUD
 
         private void min_btn_Click(object sender, EventArgs e)
         {
-            float minore = 100;
-            for (int i = 0; i < dim; i++)
-            {
-                if (p[i].prezzo < minore)
+                float min = 100;
+            //verifica quale prezzo è il minore
+                for (int i = 0; i < dim; i++)
                 {
-                    minore = p[i].prezzo;
+                    if (p[i].prezzo < min)
+                    {
+                        min = p[i].prezzo;
+                    }
                 }
-            }
-            MessageBox.Show("Prodotto minimo: " + minore);
+                MessageBox.Show("Prodotto minimo: " + min);
         }
 
         private void max_btn_Click(object sender, EventArgs e)
         {
             float maggiore = 0;
+            // verifica se quale prezzo è maggiore
             for (int i = 0; i < dim; i++)
             {
                 if (p[i].prezzo > maggiore)
@@ -170,9 +192,10 @@ namespace GestioneprodottiCRUD
         {
             string filename = "prodotti.txt";
             StreamWriter writer = new StreamWriter(filename);
+            // aggiunge i nomi e i prezzi dei prodotti nel file
             for (int i = 0; i < dim; i++)
             {
-                writer.WriteLine("Nome: " + p[i].nome.ToString() + "      Prezzo: " + p[i].prezzo.ToString() + "£");
+                writer.WriteLine("Nome: " + p[i].nome.ToString() + "       Prezzo: " + p[i].prezzo.ToString() + "£");
             }
             writer.Close();
         }
@@ -183,9 +206,11 @@ namespace GestioneprodottiCRUD
             if (File.Exists(filename))
             {
                 StreamReader reader = new StreamReader(filename);
-                string line;
+                string line; 
+                // legge il file
                 while ((line = reader.ReadLine()) != null)
                 {
+                    // aggiunge il nome e il prezzo dei prodotti nella listbox
                     articoli.Items.Add(line);
                 }
                 reader.Close();
@@ -194,13 +219,12 @@ namespace GestioneprodottiCRUD
             {
                 Console.WriteLine("Il file non esiste");
             }
-
-            Console.ReadLine();
         }
 
         private void sott_btn_Click(object sender, EventArgs e)
         {
             float percentuale = float.Parse(prc_box.Text);
+            // toglie la percentuale a ogni prezzo
             for (int i = 0; i < dim; i++)
             {
                 p[i].prezzo = (percentuale / 100) * p[i].prezzo;
@@ -212,6 +236,7 @@ namespace GestioneprodottiCRUD
         {
             float percentuale = float.Parse(prc_box.Text);
             float perc;
+            // aggiunge la percentuale a ogni prezzo
             for (int i = 0; i < dim; i++)
             {
                 perc = (percentuale / 100) * p[i].prezzo;
