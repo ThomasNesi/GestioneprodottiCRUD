@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -118,17 +119,6 @@ namespace GestioneprodottiCRUD
             MessageBox.Show("Prezzo totale: " + prezzotot + "£");
         }
 
-        private void percentuale_btn_Click(object sender, EventArgs e)
-        {
-            float percentuale = float.Parse(perc_box.Text);
-
-            for (int i = 0; i < dim; i++)
-            {
-                p[i].prezzo = (percentuale / 100) * p[i].prezzo;
-            }
-            aggiornaVista(dim);
-        }
-
         private void min_btn_Click(object sender, EventArgs e)
         {
             float minore = 100;
@@ -173,6 +163,60 @@ namespace GestioneprodottiCRUD
             }
             articoli.Items.Clear();
             // aggiunta degli elmenti ordinati
+            aggiornaVista(dim);
+        }
+
+        private void fileprod_btn_Click(object sender, EventArgs e)
+        {
+            string filename = "prodotti.txt";
+            StreamWriter writer = new StreamWriter(filename);
+            for (int i = 0; i < dim; i++)
+            {
+                writer.WriteLine("Nome: " + p[i].nome.ToString() + "      Prezzo: " + p[i].prezzo.ToString() + "£");
+            }
+            writer.Close();
+        }
+
+        private void mostraprod_btn_Click(object sender, EventArgs e)
+        {
+            string filename = "prodotti.txt";
+            if (File.Exists(filename))
+            {
+                StreamReader reader = new StreamReader(filename);
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    articoli.Items.Add(line);
+                }
+                reader.Close();
+            }
+            else
+            {
+                Console.WriteLine("Il file non esiste");
+            }
+
+            Console.ReadLine();
+        }
+
+        private void sott_btn_Click(object sender, EventArgs e)
+        {
+            float percentuale = float.Parse(prc_box.Text);
+            for (int i = 0; i < dim; i++)
+            {
+                p[i].prezzo = (percentuale / 100) * p[i].prezzo;
+            }
+            aggiornaVista(dim);
+        }
+
+        private void agg_btn_Click(object sender, EventArgs e)
+        {
+            float percentuale = float.Parse(prc_box.Text);
+            float perc;
+            for (int i = 0; i < dim; i++)
+            {
+                perc = (percentuale / 100) * p[i].prezzo;
+                p[i].prezzo = p[i].prezzo + perc;
+            }
             aggiornaVista(dim);
         }
     }

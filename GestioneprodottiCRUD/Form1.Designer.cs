@@ -39,17 +39,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.perc_box = new System.Windows.Forms.TextBox();
             this.articoli = new System.Windows.Forms.ListBox();
             this.somma_btn = new System.Windows.Forms.Button();
             this.ordinamento_btn = new System.Windows.Forms.Button();
             this.max_btn = new System.Windows.Forms.Button();
             this.min_btn = new System.Windows.Forms.Button();
-            this.percentuale_btn = new System.Windows.Forms.Button();
             this.Modificap_btn = new System.Windows.Forms.Button();
             this.Modifican_btn = new System.Windows.Forms.Button();
             this.cancella_btn = new System.Windows.Forms.Button();
             this.inserisci_btn = new System.Windows.Forms.Button();
+            this.fileprod_btn = new System.Windows.Forms.Button();
+            this.mostraprod_btn = new System.Windows.Forms.Button();
+            this.prc_box = new System.Windows.Forms.TextBox();
+            this.sott_btn = new System.Windows.Forms.Button();
+            this.agg_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -108,7 +111,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 300);
+            this.label3.Location = new System.Drawing.Point(45, 292);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 39);
             this.label3.TabIndex = 8;
@@ -141,13 +144,6 @@
             this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "RICERCA NOME";
-            // 
-            // perc_box
-            // 
-            this.perc_box.Location = new System.Drawing.Point(48, 342);
-            this.perc_box.Name = "perc_box";
-            this.perc_box.Size = new System.Drawing.Size(97, 20);
-            this.perc_box.TabIndex = 12;
             // 
             // articoli
             // 
@@ -199,16 +195,6 @@
             this.min_btn.UseVisualStyleBackColor = true;
             this.min_btn.Click += new System.EventHandler(this.min_btn_Click);
             // 
-            // percentuale_btn
-            // 
-            this.percentuale_btn.Location = new System.Drawing.Point(169, 342);
-            this.percentuale_btn.Name = "percentuale_btn";
-            this.percentuale_btn.Size = new System.Drawing.Size(78, 28);
-            this.percentuale_btn.TabIndex = 19;
-            this.percentuale_btn.Text = "percentuale";
-            this.percentuale_btn.UseVisualStyleBackColor = true;
-            this.percentuale_btn.Click += new System.EventHandler(this.percentuale_btn_Click);
-            // 
             // Modificap_btn
             // 
             this.Modificap_btn.Location = new System.Drawing.Point(169, 246);
@@ -249,22 +235,72 @@
             this.inserisci_btn.UseVisualStyleBackColor = true;
             this.inserisci_btn.Click += new System.EventHandler(this.inserisci_btn_Click);
             // 
+            // fileprod_btn
+            // 
+            this.fileprod_btn.Location = new System.Drawing.Point(380, 238);
+            this.fileprod_btn.Name = "fileprod_btn";
+            this.fileprod_btn.Size = new System.Drawing.Size(86, 36);
+            this.fileprod_btn.TabIndex = 24;
+            this.fileprod_btn.Text = "salva prodotti in un file";
+            this.fileprod_btn.UseVisualStyleBackColor = true;
+            this.fileprod_btn.Click += new System.EventHandler(this.fileprod_btn_Click);
+            // 
+            // mostraprod_btn
+            // 
+            this.mostraprod_btn.Location = new System.Drawing.Point(380, 280);
+            this.mostraprod_btn.Name = "mostraprod_btn";
+            this.mostraprod_btn.Size = new System.Drawing.Size(86, 37);
+            this.mostraprod_btn.TabIndex = 25;
+            this.mostraprod_btn.Text = "mostra prodotti nel file";
+            this.mostraprod_btn.UseVisualStyleBackColor = true;
+            this.mostraprod_btn.Click += new System.EventHandler(this.mostraprod_btn_Click);
+            // 
+            // prc_box
+            // 
+            this.prc_box.Location = new System.Drawing.Point(50, 339);
+            this.prc_box.Name = "prc_box";
+            this.prc_box.Size = new System.Drawing.Size(100, 20);
+            this.prc_box.TabIndex = 26;
+            // 
+            // sott_btn
+            // 
+            this.sott_btn.Location = new System.Drawing.Point(174, 308);
+            this.sott_btn.Name = "sott_btn";
+            this.sott_btn.Size = new System.Drawing.Size(75, 23);
+            this.sott_btn.TabIndex = 27;
+            this.sott_btn.Text = "sottrarre";
+            this.sott_btn.UseVisualStyleBackColor = true;
+            this.sott_btn.Click += new System.EventHandler(this.sott_btn_Click);
+            // 
+            // agg_btn
+            // 
+            this.agg_btn.Location = new System.Drawing.Point(174, 339);
+            this.agg_btn.Name = "agg_btn";
+            this.agg_btn.Size = new System.Drawing.Size(75, 23);
+            this.agg_btn.TabIndex = 28;
+            this.agg_btn.Text = "aggiungere";
+            this.agg_btn.UseVisualStyleBackColor = true;
+            this.agg_btn.Click += new System.EventHandler(this.agg_btn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 371);
+            this.Controls.Add(this.agg_btn);
+            this.Controls.Add(this.sott_btn);
+            this.Controls.Add(this.prc_box);
+            this.Controls.Add(this.mostraprod_btn);
+            this.Controls.Add(this.fileprod_btn);
             this.Controls.Add(this.inserisci_btn);
             this.Controls.Add(this.cancella_btn);
             this.Controls.Add(this.Modifican_btn);
             this.Controls.Add(this.Modificap_btn);
-            this.Controls.Add(this.percentuale_btn);
             this.Controls.Add(this.min_btn);
             this.Controls.Add(this.max_btn);
             this.Controls.Add(this.ordinamento_btn);
             this.Controls.Add(this.somma_btn);
             this.Controls.Add(this.articoli);
-            this.Controls.Add(this.perc_box);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -296,17 +332,20 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox perc_box;
         private System.Windows.Forms.ListBox articoli;
         private System.Windows.Forms.Button somma_btn;
         private System.Windows.Forms.Button ordinamento_btn;
         private System.Windows.Forms.Button max_btn;
         private System.Windows.Forms.Button min_btn;
-        private System.Windows.Forms.Button percentuale_btn;
         private System.Windows.Forms.Button Modificap_btn;
         private System.Windows.Forms.Button Modifican_btn;
         private System.Windows.Forms.Button cancella_btn;
         private System.Windows.Forms.Button inserisci_btn;
+        private System.Windows.Forms.Button fileprod_btn;
+        private System.Windows.Forms.Button mostraprod_btn;
+        private System.Windows.Forms.TextBox prc_box;
+        private System.Windows.Forms.Button sott_btn;
+        private System.Windows.Forms.Button agg_btn;
     }
 }
 
